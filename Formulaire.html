@@ -1,50 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <title>Exercice 3 --Programation Web</title>
+    <link rel="stylesheet" href="formulair.css">
+    <script type="text/javascript "src="formulair.js" async ></script>
 </head>
 <body>
+
+    <p id="x"></p>
+    
         <form>
             <fieldset style="widh:25;">
               <legend><b>INSCRIPTION</b></legend>
          <table>
             <tr>
-                <td>Nom <span style="color:rgb(250, 6, 31);font-weight:bold">*</span></td><td><input type="text" name="nom" value=""></td>
+                <td>Nom <span style="color:rgb(250, 6, 31);font-weight:bold">*</span></td>
+                <td><input type="text" name="nom" value="" id="nom" placeholder="Entrer votre nom"></td>
+            
             </tr>
             <tr>
-                <td>Prénom <span style="color:rgb(250, 6, 31);font-weight:bold">*</span></td><td><input type="text" name="prénon" value=""></td>
+                <td>Prénom <span style="color:rgb(250, 6, 31);font-weight:bold">*</span></td>
+                <td><input type="text" name="prénon" value="" id="prenon" placeholder="Entrer votre prénom"></td>
             </tr>
             <tr>
-                <td>code postal <span style="color:rgb(250, 6, 31);font-weight:bold">*</span></td><td><input type="text" name="code postal" value=""></td>
+                <td>Date de naissance <span style="color:rgb(250, 6, 31);font-weight:bold">*</span></td>
+                <td><input type="date" name="date de naissance" value="" id="D" ></td>
             </tr>
             <tr>
-                <td>Pays <span style="color:rgb(250, 6, 31);font-weight:bold">*</span></td><td><select name="select" id=""><option>Please select...</option></select></td>
+                <td>Code postal <span style="color:rgb(250, 6, 31);font-weight:bold">*</span></td>
+                <td><input type="text" name="code postal" value="" id="code p" placeholder="Entrer le code postal"></td>
             </tr>
             <tr>
-                <td>Genre <span style="color:rgb(250, 6, 31);font-weight:bold">*</span></td>
-                <td><input type="radio" name="genre" value="Masculin">Masculin
-                    <input type="radio" name="genre" value="Féminin">Féminin</td>
+                <td>Pays <span style="color:rgb(250, 6, 31);font-weight:bold">*</span></td>
+            <td>
+            <select name="select" id="pays"><option>Please select...</option>
+                <option>Maroc</option>
+                <option>France</option>
+                <option>Espagne</option>
+                <option>Canada</option>
+                <option>Qatar</option>
+            </select>
+            </td>
+            </tr>
+
+            <tr>
+                <td>Genre <span style="color:rgb(250, 6, 31);font-weight:bold" id="genre">*</span></td>
+                <td><input type="radio" name="genre" value="Masculin" id="H" >Homme
+                    <input type="radio" name="genre" value="Féminin" id="F">Femme</td>
             </tr>
             <tr>
                 <td>Préférences de contact <span style="color:rgb(250, 6, 31);font-weight:bold">*</span></td>
-                <td><input type="checkbox"  name="" value="">Fax
-                <input type="checkbox"  name="" value="">Email
-                <input type="checkbox"  name="" value="">Téléphone</td>
+                <td><input type="checkbox"  name="" value="" id="fax">Fax
+                <input type="checkbox"  name="" value="" id="email">Email
+                <input type="checkbox"  name="" value="" id="tele">Téléphone</td>
             </tr>
             <tr>
-                <td>Email <span style="color:rgb(250, 6, 31);font-weight:bold">*</span></td><td><input type="email" name="" value=""></td>
+                <td>Email <span style="color:rgb(250, 6, 31);font-weight:bold">*</span></td>
+                <td><input type="email" name="" value="" id="mail" placeholder="Entrer votre email"></td>
             </tr>
             <tr>
-                <td>Password ( 6-8 characters) <span style="color:rgb(250, 6, 31);font-weight:bold">*</span></td><td><input type="password" name="pwd1" value=""></td>
+                <td>Mots de passe ( 6-8 caractères) <span style="color:rgb(250, 6, 31);font-weight:bold">*</span></td>
+                <td><input type="password" name="pwd1" value="" id="p1" placeholder="Entrer votre mot de passe"></td>
             </tr>
             <tr>
-                <td>Vérification password <span style="color:rgb(250, 6, 31);font-weight:bold">*</span></td><td><input type="password" name="pwd2" value=""></td>
+                <td>Confirmation du mot de passe<span style="color:rgb(250, 6, 31);font-weight:bold">*</span></td>
+                <td><input type="password" name="pwd2" value="" id="p2" placeholder="Confirmer votre mot de passe" ></td>
             </tr>
          <footer>
             <tr>
                 <td></td>
-                <td><input type="submit" value="Envoyer">
-                <input type="reset" value="Effacer"></td>
+                <td><input type="button" value="Envoyer" id="submit" onclick="validateForm()">
+                <input type="reset" value="Effacer" id="effacer"></td>
             </tr> 
         </footer>
         </table>     
