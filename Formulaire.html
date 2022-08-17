@@ -7,28 +7,31 @@
 </head>
 <body>
 
-    <p id="x"></p>
+    <p id="d"></p>
     
         <form>
-            <fieldset style="widh:25;">
+            <fieldset>
               <legend><b>INSCRIPTION</b></legend>
          <table>
             <tr>
                 <td>Nom <span style="color:rgb(250, 6, 31);font-weight:bold">*</span></td>
-                <td><input type="text" name="nom" value="" id="nom" placeholder="Entrer votre nom"></td>
-            
+                <td><input type="text" name="nom" value="" id="nom" placeholder="Entrer votre nom" ></td>
+                <td><p id="n"></p></td>
             </tr>
             <tr>
                 <td>Prénom <span style="color:rgb(250, 6, 31);font-weight:bold">*</span></td>
-                <td><input type="text" name="prénon" value="" id="prenon" placeholder="Entrer votre prénom"></td>
+                <td><input type="text" name="Prénom" value="" id="prenom" placeholder="Entrer votre prénom" ></td>
+                <td><p id="Pr"></p></td>
             </tr>
             <tr>
                 <td>Date de naissance <span style="color:rgb(250, 6, 31);font-weight:bold">*</span></td>
                 <td><input type="date" name="date de naissance" value="" id="D" ></td>
+                <td><p id="d"></p></td>
             </tr>
             <tr>
                 <td>Code postal <span style="color:rgb(250, 6, 31);font-weight:bold">*</span></td>
                 <td><input type="text" name="code postal" value="" id="code p" placeholder="Entrer le code postal"></td>
+                <td><p id="c"></p></td>
             </tr>
             <tr>
                 <td>Pays <span style="color:rgb(250, 6, 31);font-weight:bold">*</span></td>
@@ -55,22 +58,25 @@
                 <input type="checkbox"  name="" value="" id="tele">Téléphone</td>
             </tr>
             <tr>
-                <td>Email <span style="color:rgb(250, 6, 31);font-weight:bold">*</span></td>
+                <td>E-mail <span style="color:rgb(250, 6, 31);font-weight:bold">*</span></td>
                 <td><input type="email" name="" value="" id="mail" placeholder="Entrer votre email"></td>
+                <td><p id="m"></p></td>
             </tr>
             <tr>
                 <td>Mots de passe ( 6-8 caractères) <span style="color:rgb(250, 6, 31);font-weight:bold">*</span></td>
                 <td><input type="password" name="pwd1" value="" id="p1" placeholder="Entrer votre mot de passe"></td>
+                <td><p id="p"></p></td>
             </tr>
             <tr>
                 <td>Confirmation du mot de passe<span style="color:rgb(250, 6, 31);font-weight:bold">*</span></td>
                 <td><input type="password" name="pwd2" value="" id="p2" placeholder="Confirmer votre mot de passe" ></td>
+                <td><p id="pp"></p></td>
             </tr>
          <footer>
             <tr>
                 <td></td>
-                <td><input type="button" value="Envoyer" id="submit" onclick="validateForm()">
-                <input type="reset" value="Effacer" id="effacer"></td>
+                <td><input type="button" value="Envoyer" id="submit" onclick="validateForm();">
+                <input type="reset" value="Effacer" id="effacer" onclick="validateForm();"></td>
             </tr> 
         </footer>
         </table>     
