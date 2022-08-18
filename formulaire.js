@@ -39,20 +39,19 @@ if(x.length < 5 || x==letters) {
         y.style.color="green";
     }
     //pour la verification d'E-mail
-    var x=document.getElementById("mail").value;
-    var y=document.getElementById("m");
-    var Email = new RegExp('^[0-9a-z._-]+[@]{1}[0-9a-z.-]{2,}[.]{1}[a-z]{2,5}$','i');
-  
-     if(!Email.test(x)){
-         y.innerText=" L'e-mail est non valider"; 
-         y.style.color="red"
+       var email = document.getElementById("mail").value;
+      var y = document.getElementById('m');
+      if (email== "" || email.indexOf("@", 0) < 0 || email.indexOf(".", 0) < 0)                                   
+    { 
+        y.innerHTML="L'e-mail est non valider"; 
+        y.style.color="red";
+        email.focus(); 
          
-      }else{
-         y.innerText=" Valider";
-         y.style.color="green"; 
-       
-      }
-   
+    }else{
+        y.innerHTML="valider";  
+        y.style.color="green";
+        email.focus();   
+    } 
     //pour la vérification du mot de passe
     var x=document.getElementById("p1").value;
     var y=document.getElementById("p");
@@ -73,8 +72,8 @@ if(x.length < 5 || x==letters) {
     var b=document.getElementById("p2").value;
     var y=document.getElementById("PP");
    if (a!=b || a=="") {
-            y.innerHTML="Erreur" ;
-            y.style.color="red";
+         y.innerHTML="Erreur" ;
+         y.style.color="red";
     }
     else{
         y.innerHTML="Valider" ;
@@ -87,10 +86,11 @@ if(x.length < 5 || x==letters) {
     var age = new Date().getFullYear()- new Date(x).getUTCFullYear();
 
     if (age < 18 || age == "") {
-       y.innerText="votre age doit etre plus grande que 17 ans" ;
+        y.innerText="votre age doit etre plus grande que 17 ans" ;
         y.style.color="red";
     }
     else {
-        y.innerText="Valider"
+        y.innerText="Valider";
+        y.style.color="green";
     }
    }
