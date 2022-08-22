@@ -9,7 +9,7 @@
 
     <p id="x"></p>
     
-        <form name="myForm" action="/file.php" onsubmit="return validateForm()" method="post">
+        <form>
             <fieldset>
               <legend><b>INSCRIPTION</b></legend>
          <table>
@@ -44,18 +44,21 @@
                 <option>Qatar</option>
             </select>
             </td>
+            <td><p id="choix"></p></td>
             </tr>
 
             <tr>
                 <td>Genre <span style="color:rgb(250, 6, 31);font-weight:bold" id="genre">*</span></td>
                 <td><input type="radio" name="genre" value="Masculin" id="H" >Homme
                     <input type="radio" name="genre" value="Féminin" id="F">Femme</td>
+                <td><p id="g"></p></td>
             </tr>
             <tr>
-                <td>Préférences de contact <span style="color:rgb(250, 6, 31);font-weight:bold">*</span></td>
-                <td><input type="checkbox"  name="" value="" id="fax">Fax
-                <input type="checkbox"  name="" value="" id="email">Email
-                <input type="checkbox"  name="" value="" id="tele">Téléphone</td>
+                <td>Préférences de contact <span style="color:rgb(250, 6, 31);font-weight:bold" >*</span></td>
+                <td><input type="checkbox"  name="pré" value="" id="fax">Fax
+                <input type="checkbox"  name="pré" value="" id="email">Email
+                <input type="checkbox"  name="pré" value="" id="tele">Téléphone</td>
+                <td><p id="pc"></p></td>
             </tr>
             <tr>
                 <td>E-mail <span style="color:rgb(250, 6, 31);font-weight:bold">*</span></td>
@@ -72,7 +75,7 @@
                 <td><input type="password" name="pwd2" value="" id="p2" placeholder="Confirmer votre mot de passe" ></td>
                 <td><p id="pp"></p></td>
             </tr>
-         <footer>
+        <footer>
             <tr>
                 <td></td>
                 <td><input type="button" value="Envoyer" id="submit" onclick="validateForm();">
